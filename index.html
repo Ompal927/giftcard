@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>$100 Amazon Gift Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .container {
+      margin-top: 60px;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      color: #555;
+    }
+    .timer {
+      font-size: 32px;
+      color: red;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    a.button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #ff9900;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+    .note {
+      margin-top: 20px;
+      color: #a00;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎁 Win a $100 Amazon Gift Card</h1>
+    <p>Only for iPhone users in the USA</p>
+    <div class="timer" id="countdown">05:00</div>
+    <a class="button" href="https://smrturl.co/a/s674faf4375/86?s1=" target="_blank">Claim Now</a>
+    <p class="note">Hurry! Offer expires soon.</p>
+  </div>
+  <script>
+    let time = 300;
+    const countdown = document.getElementById('countdown');
+    setInterval(() => {
+      if (time <= 0) return;
+      time--;
+      const minutes = String(Math.floor(time / 60)).padStart(2, '0');
+      const seconds = String(time % 60).padStart(2, '0');
+      countdown.textContent = minutes + ":" + seconds;
+    }, 1000);
+  </script>
+</body>
+</html>
